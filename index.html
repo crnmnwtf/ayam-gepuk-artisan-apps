@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/jpeg" href="https://storage.googleapis.com/gen-ai-hackathon-2024-invincible-mango/ayam-gepuk-artisan-logo.jpg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ayam Gepuk Artisan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --brand-yellow: #FFD700;
+        --brand-red: #FF4500;
+        --brand-black: #1a1a1a;
+      }
+      html.dark {
+        --brand-yellow: #FFD700;
+        --brand-red: #FF6347; /* Lighter red for dark mode */
+      }
+      body {
+        font-family: 'Poppins', sans-serif;
+      }
+      .font-bangers {
+        font-family: 'Bangers', cursive;
+        letter-spacing: 1.5px;
+      }
+      .splash-enter {
+        animation: splash-enter 0.7s ease-out forwards;
+      }
+      @keyframes splash-enter {
+        from {
+          opacity: 0;
+          transform: scale(0.8);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/"
+  }
+}
+</script>
+</head>
+  <body class="bg-gray-100 dark:bg-brand-black transition-colors duration-300">
+    <div id="root"></div>
+  </body>
+</html>
