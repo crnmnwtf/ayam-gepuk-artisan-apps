@@ -15,7 +15,7 @@ const SplashScreen: React.FC<SplashScreenProps> = ({ onEnter }) => {
     return (
         <div className="fixed inset-0 bg-yellow-400 flex flex-col items-center justify-center z-50 text-center p-4 splash-enter">
             <img 
-                src={`${IMG_BASE_URL}logo-yellow-bg.png`} 
+                src={`${IMG_BASE_URL}logo-yellow-bg.webp`} 
                 alt="Ayam Gepuk Artisan Logo"
                 className="w-48 md:w-64 rounded-2xl shadow-2xl mb-6 border-4 border-white"
             />

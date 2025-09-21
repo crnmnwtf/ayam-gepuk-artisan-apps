@@ -7,6 +7,10 @@ export enum Page {
   Careers = 'Careers',
   About = 'About',
   Contact = 'Contact',
+  // FIX: Add ImageGenerator page to the Page enum.
+  ImageGenerator = 'ImageGenerator',
+  ImageGallery = 'ImageGallery',
+  Features = 'Features',
 }
 
 export type Category = 'Krispy' | 'Klasik' | 'Side Dish';
@@ -24,13 +28,15 @@ export interface MenuItem {
 }
 
 export interface Outlet {
-  id: string;
+  id:string;
   name: string;
   address: string;
   hours: string;
   mapsUrl: string;
   wazeUrl: string;
   whatsappUrl: string;
+  lat: number;
+  lng: number;
 }
 
 export interface Promotion {

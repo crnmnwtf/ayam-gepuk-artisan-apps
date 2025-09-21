@@ -3,16 +3,16 @@ import { WhatsappIcon } from '../icons/WhatsappIcon';
 
 const ContactPage: React.FC = () => {
   return (
-    <div className="container mx-auto px-6 py-16">
+    <div className="container mx-auto px-4 py-8">
       <div className="text-center mb-12">
-        <h1 className="text-6xl md:text-7xl font-bangers text-[var(--brand-yellow)]" style={{ textShadow: '4px 4px 0 var(--brand-red)' }}>
+        <h1 className="text-5xl md:text-7xl font-bangers text-[var(--brand-yellow)]" style={{ textShadow: '4px 4px 0 var(--brand-red)' }}>
           HUBUNGI KAMI / CONTACT US
         </h1>
-        <p className="text-lg text-gray-600 dark:text-gray-400 mt-2">Ada soalan, maklum balas, atau tempahan katering? Kami sedia membantu!</p>
+        <p className="text-md text-gray-600 dark:text-gray-400 mt-2">Ada soalan, maklum balas, atau tempahan katering? Kami sedia membantu!</p>
       </div>
 
-      <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-10">
-        {/* Left Side: Direct Contact */}
+      <div className="max-w-4xl mx-auto grid md:grid-cols-1 gap-10">
+        {/* Direct Contact */}
         <div className="space-y-6">
             <h2 className="text-3xl font-bangers text-gray-800 dark:text-gray-200 border-b-4 border-[var(--brand-yellow)] pb-2">Direct Contact</h2>
              <a href="https://wa.me/601156277251" target="_blank" rel="noopener noreferrer" className="flex items-center p-4 bg-green-500 text-white rounded-lg shadow-md hover:bg-green-600 transition-colors">
@@ -36,7 +36,7 @@ const ContactPage: React.FC = () => {
             </div>
         </div>
         
-        {/* Right Side: Form */}
+        {/* Form */}
         <div>
             <h2 className="text-3xl font-bangers text-gray-800 dark:text-gray-200 border-b-4 border-[var(--brand-yellow)] pb-2">Inquiry Form</h2>
              <form className="mt-6 space-y-4">

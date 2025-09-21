@@ -2,55 +2,77 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/jpeg" href="https://storage.googleapis.com/gen-ai-hackathon-2024-invincible-mango/ayam-gepuk-artisan-logo.jpg" />
+    <link rel="icon" type="image/webp" href="https://storage.googleapis.com/gen-ai-hackathon-2024-invincible-mango/logo-yellow-bg.webp" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#FFD23F" />
+    <meta name="description" content="A web application for the Malaysian halal food chain Ayam Gepuk Artisan, showcasing their menu, outlets, and promotions. Experience the true taste of authentic Ayam Gepuk!" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ayamgepukartisan.com/">
+    <meta property="og:title" content="Ayam Gepuk Artisan | The True Taste of Ayam Gepuk!">
+    <meta property="og:description" content="A web application for the Malaysian halal food chain Ayam Gepuk Artisan, showcasing their menu, outlets, and promotions.">
+    <meta property="og:image" content="https://storage.googleapis.com/gen-ai-hackathon-2024-invincible-mango/logo-yellow-bg-512.webp">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ayam Gepuk Artisan | The True Taste of Ayam Gepuk!">
+    <meta name="twitter:description" content="A web application for the Malaysian halal food chain Ayam Gepuk Artisan, showcasing their menu, outlets, and promotions.">
+    <meta name="twitter:image" content="https://storage.googleapis.com/gen-ai-hackathon-2024-invincible-mango/logo-yellow-bg-512.webp">
+    
     <title>Ayam Gepuk Artisan</title>
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="apple-touch-icon" href="https://storage.googleapis.com/gen-ai-hackathon-2024-invincible-mango/logo-yellow-bg.webp" />
+    <script type="importmap">
+    {
+      "imports": {
+        "@google/genai": "https://aistudiocdn.com/@google/genai@^1.20.0",
+        "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+        "react/": "https://aistudiocdn.com/react@^19.1.1/",
+        "react": "https://aistudiocdn.com/react@^19.1.1",
+        "gsap": "https://aistudiocdn.com/gsap@^3.12.5"
+      }
+    }
+    </script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Poppins:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    <link rel="stylesheet" href="/components/MagicBento.css">
     <style>
       :root {
-        --brand-yellow: #FFD700;
-        --brand-red: #FF4500;
-        --brand-black: #1a1a1a;
+        --brand-red: #F07636;
+        --brand-yellow: #FFD23F;
+        --brand-orange: #F46036;
+        --brand-black: #25252E;
+        --brand-green: #4CAF50;
       }
       html.dark {
-        --brand-yellow: #FFD700;
-        --brand-red: #FF6347; /* Lighter red for dark mode */
+        color-scheme: dark;
       }
       body {
-        font-family: 'Poppins', sans-serif;
+        transition: background-color 0.3s ease, color 0.3s ease;
       }
-      .font-bangers {
-        font-family: 'Bangers', cursive;
-        letter-spacing: 1.5px;
-      }
-      .splash-enter {
-        animation: splash-enter 0.7s ease-out forwards;
-      }
-      @keyframes splash-enter {
-        from {
-          opacity: 0;
-          transform: scale(0.8);
-        }
-        to {
-          opacity: 1;
-          transform: scale(1);
-        }
-      }
+      .font-bangers { font-family: 'Bangers', cursive; }
+      .font-sans { font-family: 'Poppins', sans-serif; }
     </style>
-  <script type="importmap">
-{
-  "imports": {
-    "react/": "https://aistudiocdn.com/react@^19.1.1/",
-    "react": "https://aistudiocdn.com/react@^19.1.1",
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/"
-  }
-}
-</script>
-</head>
-  <body class="bg-gray-100 dark:bg-brand-black transition-colors duration-300">
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/service-worker.js').then(registration => {
+            console.log('ServiceWorker registration successful with scope: ', registration.scope);
+          }, err => {
+            console.log('ServiceWorker registration failed: ', err);
+          });
+        });
+      }
+    </script>
   </body>
 </html>

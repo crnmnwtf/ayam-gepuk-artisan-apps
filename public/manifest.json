@@ -1,0 +1,20 @@
+{
+  "short_name": "Ayam Gepuk",
+  "name": "Ayam Gepuk Artisan",
+  "icons": [
+    {
+      "src": "https://storage.googleapis.com/gen-ai-hackathon-2024-invincible-mango/logo-yellow-bg-192.webp",
+      "type": "image/webp",
+      "sizes": "192x192"
+    },
+    {
+      "src": "https://storage.googleapis.com/gen-ai-hackathon-2024-invincible-mango/logo-yellow-bg-512.webp",
+      "type": "image/webp",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#FFD23F",
+  "background_color": "#25252E"
+}
